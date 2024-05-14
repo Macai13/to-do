@@ -24,9 +24,8 @@ fn main()
         {
             0 => std::process::exit(0),
             1 => add_task(None),
-            2 => edit_task(),
-            3 => remove_task(),
-            4 => show_tasks(),
+            2 => remove_task(),
+            3 => show_tasks(),
             _ => (),
         }
     }
@@ -35,9 +34,8 @@ fn main()
 fn menu() -> i8
 {
     println!("1. Add a task");
-    println!("2. Edit a task");
-    println!("3. Remove a task");
-    println!("4. View all tasks");
+    println!("2. Remove a task");
+    println!("3. View all tasks");
     println!("0. Exit\n");
 
     match get_input().parse::<i8>() 
@@ -106,11 +104,6 @@ fn add_task(task: Option<&str>) -> ()
     {
         println!("{}", "Task added sucessfully!\n".bright_blue());
     }
-}
-
-fn edit_task() -> ()
-{
-
 }
 
 fn remove_task() -> ()
